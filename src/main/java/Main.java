@@ -1,5 +1,8 @@
 import builder.Person;
-import polymorphism.*;
+import polymorphism.AnyShape;
+import polymorphism.Circle;
+import polymorphism.Square;
+import polymorphism.Triangle;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class Main {
         AnyShape triangle = new AnyShape(new Triangle(4, 8));
         System.out.println(triangle.square());
 
-
     }
+
 
 }
