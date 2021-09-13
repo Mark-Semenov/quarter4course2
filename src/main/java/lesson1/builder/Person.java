@@ -1,4 +1,4 @@
-package builder;
+package lesson1.builder;
 
 public class Person {
     private String firstName;

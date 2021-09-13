@@ -1,4 +1,4 @@
-package refactoring;
+package lesson1.refactoring;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,17 +1,15 @@
-package polymorphism;
+package lesson1.polymorphism;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Square implements Shape {
+public class AnyShape {
 
-    private int a;
+    private final Shape shape;
 
-    @Override
     public double square() {
-        return a * a;
+        return shape.square();
     }
-
 }

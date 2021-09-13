@@ -1,4 +1,4 @@
-package refactoring;
+package lesson1.refactoring;
 
 /*
 Т.к. методы интерфейсов Movable & Stoppable подходят ко всем машинам,

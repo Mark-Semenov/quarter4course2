@@ -1,4 +1,4 @@
-package polymorphism;
+package lesson1.polymorphism;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
