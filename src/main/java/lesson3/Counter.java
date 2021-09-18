@@ -5,20 +5,34 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Counter {
 
-    static int a;
+    private int a;
+    private final Lock lock;
 
-    public static void main(String[] args) {
-        Lock lock = new ReentrantLock();
-        for (int i = 0; i < 10; i++) {
-            new Thread(() -> counter(lock)).start();
-        }
+    {
+        lock = new ReentrantLock();
     }
 
-    public static void counter(Lock lock) {
+    public void minus() {
+        calculate("-");
+    }
+
+    public void plus() {
+        calculate("+");
+
+    }
+
+    private void calculate(String operation) {
         lock.lock();
         try {
-            a++;
-            System.out.println("b: " + a);
+            if (operation.equals("+")) {
+                a++;
+            } else if (operation.equals("-")) {
+                a--;
+            }
+            System.out.println("a: " + a);
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         } finally {
             lock.unlock();
         }
