@@ -9,7 +9,6 @@ public class Main {
 
         new Thread(Main::m1).start();
         new Thread(Main::m2).start();
-
     }
 
     public static void m1() {
