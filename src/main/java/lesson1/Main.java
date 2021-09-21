@@ -1,8 +1,10 @@
-import builder.Person;
-import polymorphism.AnyShape;
-import polymorphism.Circle;
-import polymorphism.Square;
-import polymorphism.Triangle;
+package lesson1;
+
+import lesson1.builder.Person;
+import lesson1.polymorphism.AnyShape;
+import lesson1.polymorphism.Circle;
+import lesson1.polymorphism.Square;
+import lesson1.polymorphism.Triangle;
 
 public class Main {
     public static void main(String[] args) {
