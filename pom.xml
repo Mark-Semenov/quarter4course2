@@ -9,13 +9,11 @@
     <name>hibernate</name>
     <description>Demo project</description>
     <properties>
-        <java.version>11</java.version>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -36,7 +34,6 @@
             <artifactId>flyway-core</artifactId>
             <version>7.15.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -48,6 +45,6 @@
             </plugin>
         </plugins>
     </build>
-
+    </dependencies>
 
 </project>
