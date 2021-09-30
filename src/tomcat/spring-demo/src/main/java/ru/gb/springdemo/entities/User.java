@@ -1,6 +1,7 @@
 package ru.gb.springdemo.entities;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,6 +18,12 @@ public class User {
     private String password;
 
     @ManyToMany
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    @ToString.Exclude
     private List<Role> roles;
 
 }

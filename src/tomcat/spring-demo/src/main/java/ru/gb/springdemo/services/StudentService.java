@@ -1,6 +1,5 @@
 package ru.gb.springdemo.services;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,8 +26,8 @@ public class StudentService {
     }
 
 
-    public Student findStudent(Student student) {
-        return studentRepository.findById(student.getId()).orElse(null);
+    public Student findStudentById(Long id) {
+        return studentRepository.findById(id).orElseThrow();
     }
 
 

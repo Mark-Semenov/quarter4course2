@@ -8,35 +8,44 @@
           crossorigin="anonymous">
 </head>
 <body>
-<div>
+<div class="top container">
     <table class="table">
         <thead>
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="student : ${students}">
-            <td th:text="${student.getId()}"/>
-            <td th:text="${student.getName()}"/>
-            <td th:text="${student.getAge()}"/>
+            <td th:text="${student.id}"/>
+            <td th:text="${student.name}"/>
+            <td th:text="${student.age}"/>
+
             <td>
-                <a class="btn btn-primary">Add
-                </a>
+                <a class="btn btn-primary"
+                   th:href="@{${#httpServletRequest.getContextPath()}
+                   + '/student?id='+ ${student.id}}">Update</a>
             </td>
             <td>
-                <a class="btn btn-primary">Update</a>
-            </td>
-            <td>
-                <a class="btn btn-primary" th:href="@{${#httpServletRequest.getContextPath()} + '/delete?id=' + ${student.getId()}}">
+                <a class="btn btn-primary"
+                   th:href="@{${#httpServletRequest.getContextPath()} + '/delete?id='+ ${student.id}}">
                     Delete
                 </a>
             </td>
         </tr>
         </tbody>
     </table>
+
+    <div>
+        <a class="btn btn-primary" th:href="@{${#httpServletRequest.getContextPath()} + '/student?id='}">
+            Add
+        </a>
+    </div>
+
 </div>
 </body>
 </html>
