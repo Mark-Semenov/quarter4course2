@@ -5,7 +5,7 @@ test/
 target/
 # Log file
 *.log
-
+.gitignore
 # BlueJ files
 *.ctxt
 
